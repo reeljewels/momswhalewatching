@@ -7,63 +7,85 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   
   <style>
+    /* Deep Sea Color Palette */
     :root {
-      --ocean-blue: #0a4d68;
-      --ocean-dark: #063547;
-      --bg-color: #f8f9fa;
-      --text-color: #222;
+      --bg-dark: #050a14;        /* Deep midnight blue */
+      --card-bg: #0d1626;       /* Slightly lighter navy for depth */
+      --accent-teal: #20c997;   /* Vibrant ocean teal */
+      --text-main: #f8f9fa;     /* Crisp white */
+      --text-muted: #adb5bd;    /* Soft grey for secondary text */
     }
 
     body {
-      font-family: system-ui, -apple-system, sans-serif;
-      background: var(--bg-color);
-      color: var(--text-color);
+      font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text-main);
       margin: 0;
       padding: 0;
       line-height: 1.6;
     }
 
     .container {
-      max-width: 800px;
+      max-width: 850px;
       margin: 0 auto;
-      padding: 2rem;
+      padding: 4rem 2rem;
     }
 
+    /* Header Section */
     header {
-      margin-bottom: 3rem;
       text-align: center;
+      margin-bottom: 5rem;
     }
 
     h1 {
+      font-size: 2.5rem;
       font-weight: 700;
-      margin-bottom: 0.5rem;
+      letter-spacing: -0.02em;
+      margin-bottom: 1rem;
+      color: var(--text-main);
     }
 
-    .intro-text {
-      font-size: 1.1rem;
-      color: #444;
+    .intro-text p {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      max-width: 600px;
+      margin: 0 auto 1rem;
     }
 
-    /* Video Styling */
+    .highlight {
+      color: var(--accent-teal);
+      font-weight: 600;
+    }
+
+    /* Video Portfolio Section */
     .video-card {
-      margin-bottom: 3rem;
+      margin-bottom: 5rem;
     }
 
     .video-card h3 {
-      margin-bottom: 1rem;
-      font-size: 1.2rem;
+      font-size: 1.25rem;
+      margin-bottom: 1.5rem;
+      font-weight: 500;
+      border-left: 4px solid var(--accent-teal);
+      padding-left: 1rem;
     }
 
-    .video-container {
+    .video-wrapper {
       position: relative;
       padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
       height: 0;
       overflow: hidden;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      border-radius: 12px;
+      background: #000;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+      transition: transform 0.3s ease;
     }
 
-    .video-container iframe {
+    .video-wrapper:hover {
+      transform: translateY(-5px);
+    }
+
+    .video-wrapper iframe {
       position: absolute;
       top: 0;
       left: 0;
@@ -75,35 +97,51 @@
     /* Social Media Section */
     .social-section {
       text-align: center;
-      margin-top: 4rem;
-      padding-top: 2rem;
-      border-top: 1px solid #ddd;
+      margin-top: 6rem;
+      padding: 3rem 0;
+      background: var(--card-bg);
+      border-radius: 20px;
+    }
+
+    .social-section h2 {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
     }
 
     .social-links {
       display: flex;
       justify-content: center;
-      gap: 2rem;
-      margin-top: 1.5rem;
+      gap: 3rem;
     }
 
     .social-links a {
-      font-size: 2rem; /* Making icons larger */
-      color: var(--ocean-blue);
-      transition: transform 0.2s ease, color 0.2s ease;
+      font-size: 2.5rem;
+      color: var(--text-main);
+      text-decoration: none;
+      transition: all 0.3s ease;
     }
 
+    /* Specific Social Colors on Hover */
     .social-links a:hover {
-      color: var(--ocean-dark);
-      transform: scale(1.1);
+      transform: translateY(-8px);
     }
+    
+    .fa-facebook:hover { color: #1877F2; text-shadow: 0 0 15px rgba(24, 119, 242, 0.5); }
+    .fa-youtube:hover { color: #FF0000; text-shadow: 0 0 15px rgba(255, 0, 0, 0.5); }
+    .fa-instagram:hover { color: #E4405F; text-shadow: 0 0 15px rgba(228, 64, 95, 0.5); }
 
     footer {
       text-align: center;
-      margin-top: 4rem;
-      padding-bottom: 2rem;
+      margin-top: 5rem;
+      padding-bottom: 3rem;
       font-size: 0.9rem;
-      color: #666;
+      color: var(--text-muted);
+    }
+
+    /* Mobile adjustments */
+    @media (max-width: 600px) {
+      h1 { font-size: 1.8rem; }
+      .social-links { gap: 2rem; }
     }
   </style>
 </head>
@@ -113,7 +151,7 @@
     <header>
       <h1>Mom’s Whale Watching</h1>
       <div class="intro-text">
-        <p>Whale watching videography from Monterey Bay, Maui, and Alaska featured in national news coverage such as <strong>Good Morning America</strong>.</p>
+        <p>Whale watching videography from Monterey Bay, Maui, and Alaska featured on <span class="highlight">Good Morning America</span>.</p>
         <p>Cheré Tamura has documented whales and contributed to scientific research for forty years.</p>
       </div>
     </header>
@@ -121,28 +159,28 @@
     <main>
       <section class="video-card">
         <h3>Humpback Breach with Rainbow</h3>
-        <div class="video-container">
+        <div class="video-wrapper">
           <iframe src="https://www.youtube.com/embed/ma1JqNB66GA" allowfullscreen></iframe>
         </div>
       </section>
 
       <section class="video-card">
-        <h3>All Three Ultimate Whale Watch Boats Surrounded By Humpbacks</h3>
-        <div class="video-container">
+        <h3>The Ultimate Whale Watch Fleet</h3>
+        <div class="video-wrapper">
           <iframe src="https://www.youtube.com/embed/fQVztwejs-c" allowfullscreen></iframe>
         </div>
       </section>
 
       <section class="video-card">
-        <h3>Competition Group in Maui with Captain Jill Hein</h3>
-        <div class="video-container">
+        <h3>Maui Competition Group</h3>
+        <div class="video-wrapper">
           <iframe src="https://www.youtube.com/embed/1TQq3UFI5NQ?start=122" allowfullscreen></iframe>
         </div>
       </section>
     </main>
 
     <section class="social-section">
-      <h2>Join me on Social Media</h2>
+      <h2>Join the Community</h2>
       <div class="social-links">
         <a href="https://www.facebook.com/momswhalewatching" title="Facebook">
           <i class="fa-brands fa-facebook"></i>
