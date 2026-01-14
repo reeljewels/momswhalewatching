@@ -31,27 +31,37 @@
       padding: 4rem 2rem;
     }
 
-    /* Header Section */
-    header {
-      text-align: center;
-      margin-bottom: 5rem;
-    }
+   /* Header Section */
+header {
+  text-align: left; /* Changed from center */
+  margin-bottom: 5rem;
+}
 
-    h1 {
-      font-size: 2.5rem;
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      margin-bottom: 1rem;
-      color: var(--text-main);
-    }
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.5rem; /* Tighter spacing for tagline */
+  color: var(--text-main);
+  border-left: 6px solid var(--accent-teal); /* Matches video card accent */
+  padding-left: 1.5rem;
+}
 
-    .intro-text p {
-      text-align: left;
-      font-size: 1.15rem;
-      color: var(--text-muted);
-      max-width: 850px;
-      margin: 2rem auto 1rem;
-    }
+.tagline {
+  font-size: 1.1rem;
+  color: var(--accent-teal);
+  margin-bottom: 2.5rem;
+  margin-left: 1.5rem; /* Aligns with h1 padding */
+  font-weight: 500;
+}
+
+.intro-text p {
+  text-align: left; /* Keep as-is */
+  font-size: 1.15rem;
+  color: var(--text-muted);
+  max-width: 850px;
+  margin: 1rem auto 1rem 0; /* Remove auto centering, align left */
+}
 
     .highlight {
       color: var(--accent-teal);
@@ -150,12 +160,13 @@
 <body>
   <div class="container">
     <header>
-      <h1>Mom’s Whale Watching</h1>
-      <div class="intro-text">
-        <p>Cheré Tamura has documented whales and contributed to scientific research for forty years.</p>
-        <p>Whale watching videography from Monterey Bay, Maui, and Alaska featured on <span class="highlight">Good Morning America</span>.</p>
-      </div>
-    </header>
+  <h1>Mom's Whale Watching</h1>
+  <p class="tagline">Videography by Cheré Tamura</p>
+  <div class="intro-text">
+    <p>Cheré Tamura has documented whales and contributed to scientific research for forty years.</p>
+    <p>Whale watching videography from Monterey Bay, Maui, and Alaska featured on <span class="highlight">Good Morning America</span>.</p>
+  </div>
+</header>
 
     <main>
       <section class="video-card">
