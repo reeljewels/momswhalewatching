@@ -2,109 +2,163 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Mom’s Whale Watching: Videography from Monterey, Maui, and Alaska by Cheré Tamura</title>
+  <title>Mom’s Whale Watching: Videography by Cheré Tamura</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">  <style>
-    
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <style>
+    :root {
+      --ocean-blue: #0a4d68;
+      --ocean-dark: #063547;
+      --bg-color: #f8f9fa;
+      --text-color: #222;
+    }
+
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
-                   Roboto, Helvetica, Arial, sans-serif;
-      background: #f8f9fa;
-      color: #222;
+      font-family: system-ui, -apple-system, sans-serif;
+      background: var(--bg-color);
+      color: var(--text-color);
       margin: 0;
-      padding: 2rem;
-      line-height: 1.5;
-    }
-
-    h1 {
-      font-weight: 600;
-    }
-
-    .video {
-      margin: 2rem 0;
-    }
-
-    iframe {
-      width: 100%;
-      max-width: 800px;
-      height: 450px;
-      border: none;
+      padding: 0;
+      line-height: 1.6;
     }
 
     .container {
-      max-width: 900px;
-      margin: auto;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    header {
+      margin-bottom: 3rem;
+      text-align: center;
+    }
+
+    h1 {
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .intro-text {
+      font-size: 1.1rem;
+      color: #444;
+    }
+
+    /* Video Styling */
+    .video-card {
+      margin-bottom: 3rem;
+    }
+
+    .video-card h3 {
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+    }
+
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+      height: 0;
+      overflow: hidden;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    /* Social Media Section */
+    .social-section {
+      text-align: center;
+      margin-top: 4rem;
+      padding-top: 2rem;
+      border-top: 1px solid #ddd;
     }
 
     .social-links {
-  margin-top: 1.5rem;
-  display: flex;
-  gap: 1.25rem;
-  flex-wrap: wrap;
-}
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 1.5rem;
+    }
 
-.social-links a {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  font-size: 0.95rem;
-  text-decoration: none;
-  color: #0a4d68; /* ocean-adjacent, professional */
-  border-bottom: 1px solid transparent;
-  transition: border-color 0.2s ease, color 0.2s ease;
-}
+    .social-links a {
+      font-size: 2rem; /* Making icons larger */
+      color: var(--ocean-blue);
+      transition: transform 0.2s ease, color 0.2s ease;
+    }
 
-.social-links a:hover {
-  color: #063547;
-  border-bottom: 1px solid #063547;
-}
-    
+    .social-links a:hover {
+      color: var(--ocean-dark);
+      transform: scale(1.1);
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 4rem;
+      padding-bottom: 2rem;
+      font-size: 0.9rem;
+      color: #666;
+    }
   </style>
 </head>
 
 <body>
   <div class="container">
-    <h1>Mom’s Whale Watching</h1>
-    <p>
-     <p> Whale watching videography from Monterey Bay, Maui, and Alaska featured in national news coverage such as Good Morning America.</p>
-      <p></p>Cheré Tamura documented whales and contributed to scientifc research for forty years.</p>
-    </p>
+    <header>
+      <h1>Mom’s Whale Watching</h1>
+      <div class="intro-text">
+        <p>Whale watching videography from Monterey Bay, Maui, and Alaska featured in national news coverage such as <strong>Good Morning America</strong>.</p>
+        <p>Cheré Tamura has documented whales and contributed to scientific research for forty years.</p>
+      </div>
+    </header>
 
-  <div class="video">
-  <h3>Humpback Breach with Rainbow</h3>
-  <iframe 
-    src="https://www.youtube.com/embed/ma1JqNB66GA" 
-    allowfullscreen>
-  </iframe>
-</div>
+    <main>
+      <section class="video-card">
+        <h3>Humpback Breach with Rainbow</h3>
+        <div class="video-container">
+          <iframe src="https://www.youtube.com/embed/ma1JqNB66GA" allowfullscreen></iframe>
+        </div>
+      </section>
 
-<div class="video">
-  <h3>All Three Ultimate Whale Watch Boats Surrounded By Humpbacks</h3>
-  <iframe 
-    src="https://www.youtube.com/embed/fQVztwejs-c" 
-    allowfullscreen>
-  </iframe>
-</div>
+      <section class="video-card">
+        <h3>All Three Ultimate Whale Watch Boats Surrounded By Humpbacks</h3>
+        <div class="video-container">
+          <iframe src="https://www.youtube.com/embed/fQVztwejs-c" allowfullscreen></iframe>
+        </div>
+      </section>
 
-<div class="video">
-  <h3>Competition Group in Maui with Captain Jill Hein</h3>
-  <iframe 
-    src="https://www.youtube.com/embed/1TQq3UFI5NQ?start=122" 
-    allowfullscreen>
-  </iframe>
-</div>
-<div>
-<p><h2>Join me on Social Media</p></h2>
+      <section class="video-card">
+        <h3>Competition Group in Maui with Captain Jill Hein</h3>
+        <div class="video-container">
+          <iframe src="https://www.youtube.com/embed/1TQq3UFI5NQ?start=122" allowfullscreen></iframe>
+        </div>
+      </section>
+    </main>
+
+    <section class="social-section">
+      <h2>Join me on Social Media</h2>
       <div class="social-links">
-  <a href="https://www.facebook.com/momswhalewatching" target="_blank" rel="noopener">Facebook</a>
-  <a href="https://www.instagram.com/momswhalewatching" target="_blank" rel="noopener">Instagram</a>
-  <a href="https://www.youtube.com/@cherefrommomswhalewatching8507" target="_blank" rel="noopener">YouTube</a>
-</div>
-</a></p>
-<br>
-  <br>
-    <br>
-    <p><center>© 2026 Cheré Tamura — All rights reserved.</center></p>
-      
-    </div>
+        <a href="https://www.facebook.com/momswhalewatching" title="Facebook">
+          <i class="fa-brands fa-facebook"></i>
+        </a>
+        <a href="https://www.youtube.com/@cherefrommomswhalewatching8507" title="YouTube">
+          <i class="fa-brands fa-youtube"></i>
+        </a>
+        <a href="https://www.instagram.com/momswhalewatching" title="Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+      </div>
+    </section>
+
+    <footer>
+      <p>© 2026 Cheré Tamura — All rights reserved.</p>
+    </footer>
   </div>
 </body>
 </html>
